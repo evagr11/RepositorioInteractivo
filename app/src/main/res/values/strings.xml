@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProyectitosInteractivos</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_propinas">Propinas</string>
+    <string name="title_activity_botones">Botones</string>
+    <string name="title_activity_login">Login</string>
+</resources>
