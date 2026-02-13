@@ -11,21 +11,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectitosInteractivos">
+
+        <activity
+            android:name=".proyectos.proyecto4.Galeria"
+            android:exported="false"
+            android:label="Galeria"
+            android:theme="@style/Theme.ProyectitosInteractivos" />
+
+        <activity
+            android:name=".proyectos.proyecto6.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ProyectitosInteractivos" />
+
+        <activity
+            android:name=".proyectos.proyecto5.Formulario"
+            android:exported="false"
+            android:label="@string/title_activity_formulario"
+            android:theme="@style/Theme.ProyectitosInteractivos" />
+
         <activity
             android:name=".proyectos.proyecto3.Login"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.ProyectitosInteractivos" />
+
         <activity
             android:name=".proyectos.proyecto2.Botones"
             android:exported="false"
             android:label="@string/title_activity_botones"
             android:theme="@style/Theme.ProyectitosInteractivos" />
+
         <activity
             android:name=".proyectos.proyecto1.Propinas"
             android:exported="false"
             android:label="@string/title_activity_propinas"
             android:theme="@style/Theme.ProyectitosInteractivos" />
+
         <activity
             android:name=".ui.theme.Home"
             android:exported="true"
@@ -33,10 +55,10 @@
             android:theme="@style/Theme.ProyectitosInteractivos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

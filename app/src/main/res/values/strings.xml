@@ -4,4 +4,17 @@
     <string name="title_activity_propinas">Propinas</string>
     <string name="title_activity_botones">Botones</string>
     <string name="title_activity_login">Login</string>
+    <string name="title_activity_galeria">Galeria</string>
+
+    <string name="SuperPusheenicorn">Super Pusheenicorn</string>
+    <string name="PusheenHeart">Pusheen with Heart</string>
+    <string name="Pusheenicorn">Pusheenicorn</string>
+    <string name="PusheenMermaid">Pusheen Mermaid</string>
+    <string name="PusheenChef">Pusheen the Chef</string>
+    <string name="PusheenWitch">Pusheen Witch</string>
+    <string name="PusheenBallerina">Pusheen Ballerina</string>
+    <string name="PusheenDinosaur">Pusheen Dinosaur</string>
+
+    <string name="title_activity_formulario">Formulario</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
