@@ -3,8 +3,14 @@ package com.evagr.proyectitosinteractivos.proyectos.proyecto4
 
 import com.evagr.proyectitosinteractivos.R
 
+/**
+ * Crea la lista de tarjetas de la galería.
+ */
 class MisMiniaturas {
     companion object{
+        /**
+         * @return las ocho [Miniaturas] de la galería.
+         */
         fun cargarMiniaturas() : ArrayList<Miniaturas>{
             val listaAuxiliar : ArrayList<Miniaturas> = ArrayList<Miniaturas>()
 

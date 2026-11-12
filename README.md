@@ -9,6 +9,9 @@
   <a href="https://github.com/evagr11/RepositorioInteractivo" target="_blank">
     <img src="https://img.shields.io/badge/Ver_Código-2B1055?style=for-the-badge&logo=github&logoColor=white" alt="Ver Código">
   </a>
+  <a href="https://evagr11.github.io/RepositorioInteractivo/kdoc/" target="_blank">
+    <img src="https://img.shields.io/badge/KDoc_(Dokka)-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="KDoc">
+  </a>
   <a href="docs/Documentacion_RepositorioInteractivo.pdf" target="_blank">
     <img src="https://img.shields.io/badge/Documentación-7F52FF?style=for-the-badge&logo=latex&logoColor=white" alt="Documentación">
   </a>
@@ -104,7 +107,8 @@ RepositorioInteractivo/
                 ├── values/          # Strings, colores, temas XML
                 └── ...
 docs/
-└── Documentacion_RepositorioInteractivo.pdf  # Documentación técnica en LaTeX
+├── Documentacion_RepositorioInteractivo.pdf  # Documentación técnica en LaTeX
+└── kdoc/                                     # KDoc generado con Dokka (GitHub Pages)
 .github/readme/                    # Mockup de este README
 ```
 

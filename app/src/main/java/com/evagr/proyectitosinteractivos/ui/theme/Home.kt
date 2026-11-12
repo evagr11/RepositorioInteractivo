@@ -40,7 +40,15 @@ import androidx.compose.ui.unit.sp
 import com.evagr.proyectitosinteractivos.R
 import com.evagr.proyectitosinteractivos.data.MisProyectos
 
+/**
+ * Pantalla principal (la del `LAUNCHER`): el título y el carrusel de mini-proyectos.
+ */
 class Home : ComponentActivity() {
+    /**
+     * Activa el modo de pantalla completa y carga [HomeApp] dentro del tema.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -56,6 +64,10 @@ class Home : ComponentActivity() {
         }
     }
 
+    /**
+     * Dibuja el título y un `LazyRow` con una tarjeta por cada [com.evagr.proyectitosinteractivos.data.Proyecto].
+     * El botón «Acceder» abre su Activity con un `Intent`.
+     */
     @Composable
     fun HomeApp() {
 

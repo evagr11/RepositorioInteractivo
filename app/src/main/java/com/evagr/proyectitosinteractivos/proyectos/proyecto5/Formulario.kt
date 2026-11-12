@@ -30,9 +30,20 @@ import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 import androidx.compose.runtime.setValue
 
 
+/**
+ * Mini-proyecto 5: test de 10 preguntas con la clase genérica [Pregunta].
+ */
 class Formulario : ComponentActivity() {
 
+    /**
+     * Lo que escribe el usuario en cada pregunta, en el mismo orden.
+     */
     var respuestas = Array(10) {""}
+    /**
+     * Carga [FormularioApp] dentro del tema.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -49,11 +60,21 @@ class Formulario : ComponentActivity() {
 
     }
 
+    /**
+     * Carga las preguntas y se las pasa a [ListaPreguntas].
+     */
     @Composable
     fun FormularioApp(){
         ListaPreguntas(MisPreguntas.cargarPreguntas())
     }
 
+    /**
+     * Lista de preguntas que ocupa el espacio libre y botón «Finalizar Test» fijo abajo,
+     * que corrige y enseña los aciertos.
+     *
+     * @param listaPreg preguntas del test.
+     * @param modifier modificador de la pantalla.
+     */
     @Composable
     fun ListaPreguntas(listaPreg : ArrayList<Pregunta<*>>, modifier: Modifier = Modifier){
 
@@ -99,6 +120,13 @@ class Formulario : ComponentActivity() {
 
     }
 
+    /**
+     * Tarjeta con el enunciado y el campo de respuesta, que guarda lo escrito en [respuestas].
+     *
+     * @param preg pregunta que se muestra.
+     * @param index posición de la pregunta.
+     * @param modifier modificador de la tarjeta.
+     */
     @Composable
     fun PreguntaCard(preg: Pregunta<*>, index : Int, modifier: Modifier = Modifier){
         var inputText by remember{ mutableStateOf((respuestas[index]))
@@ -133,6 +161,11 @@ class Formulario : ComponentActivity() {
         }
     }
 
+    /**
+     * Compara cada respuesta con la correcta según su tipo y suma los aciertos en [Score].
+     *
+     * @param listaPreg preguntas con sus respuestas correctas.
+     */
     fun validarRespuestas(listaPreg: ArrayList<Pregunta<*>>){
         for (i in 0 until listaPreg.size) {
             val user = respuestas[i]

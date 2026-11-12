@@ -9,7 +9,15 @@ import com.evagr.proyectitosinteractivos.proyectos.proyecto5.Formulario
 import com.evagr.proyectitosinteractivos.proyectos.proyecto6.MainActivity
 
 
+/**
+ * Lista de los seis mini-proyectos del carrusel.
+ *
+ * Para añadir un mini-proyecto nuevo basta con añadir otro [Proyecto] a [proyectos].
+ */
 class MisProyectos {
+    /**
+     * Mini-proyectos en el orden en que aparecen en el carrusel.
+     */
     val proyectos = listOf(
         Proyecto(
             "Propinas",

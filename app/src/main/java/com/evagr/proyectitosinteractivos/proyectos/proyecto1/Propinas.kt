@@ -31,7 +31,15 @@ import androidx.compose.ui.unit.dp
 import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 import java.text.NumberFormat
 
+/**
+ * Mini-proyecto 1: calculadora de propinas.
+ */
 class Propinas : ComponentActivity() {
+    /**
+     * Carga [TipTimeLayout] dentro del tema.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,11 +52,26 @@ class Propinas : ComponentActivity() {
         }
     }
 
+    /**
+     * Calcula la propina y le da el formato de moneda del dispositivo.
+     *
+     * @param amount cantidad de la cuenta.
+     * @param tipPercent porcentaje de propina.
+     * @return la propina formateada, por ejemplo `1,50 €`.
+     */
     private fun calculateTip(amount: Double, tipPercent: Double): String{
         val tip = tipPercent / 100 * amount
         return NumberFormat.getCurrencyInstance().format(tip)
     }
 
+    /**
+     * Campo de texto de una línea con el teclado numérico.
+     *
+     * @param label texto de la etiqueta.
+     * @param value texto actual del campo.
+     * @param onValueChange se llama con el texto nuevo cada vez que cambia.
+     * @param modifier modificador del campo.
+     */
     @Composable
     fun NumberTextFild(label : String, value: String, onValueChange : (String)-> Unit, modifier: Modifier = Modifier.Companion){
         TextField(
@@ -66,6 +89,10 @@ class Propinas : ComponentActivity() {
 
     }
 
+    /**
+     * Pantalla de la calculadora. Recalcula la propina con cada cambio; si el
+     * porcentaje está vacío usa un 15 % y si la cantidad no es un número, 0.
+     */
     @Composable
     fun TipTimeLayout(){
         var inputText by remember { mutableStateOf("") }

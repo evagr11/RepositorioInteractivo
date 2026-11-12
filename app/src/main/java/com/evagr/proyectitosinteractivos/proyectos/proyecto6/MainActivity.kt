@@ -33,9 +33,20 @@ import com.evagr.proyectitosinteractivos.R
 import com.evagr.proyectitosinteractivos.proyectos.proyecto6.MainViewModel
 import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 
+/**
+ * Mini-proyecto 6: login con el estado en un [MainViewModel].
+ */
 class MainActivity : ComponentActivity() {
+    /**
+     * ViewModel con el estado del formulario.
+     */
     val viewModelTest = MainViewModel()
 
+    /**
+     * Carga [LoginApp] con el ViewModel.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -161,6 +172,12 @@ fun FormularioApp2(
 
  */
 
+/**
+ * Pantalla del login avanzado. Observa el estado con `collectAsState()` y avisa al
+ * ViewModel de cada cambio; al entrar saluda por el nombre.
+ *
+ * @param viewModel ViewModel con el estado.
+ */
 @Composable
 fun LoginApp(
     viewModel: MainViewModel = MainViewModel()

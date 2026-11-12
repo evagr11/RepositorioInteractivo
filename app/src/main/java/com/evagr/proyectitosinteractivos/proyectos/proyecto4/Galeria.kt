@@ -26,7 +26,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 
+/**
+ * Mini-proyecto 4: galería de tarjetas con imagen y nombre.
+ */
 class Galeria : ComponentActivity() {
+    /**
+     * Carga [GaleriaApp] dentro del tema.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -42,12 +50,21 @@ class Galeria : ComponentActivity() {
         }
     }
 
+    /**
+     * Carga las miniaturas y se las pasa a [ListaMiniaturas].
+     */
     @Composable
     fun GaleriaApp() {
 
         ListaMiniaturas(MisMiniaturas.cargarMiniaturas())
     }
 
+    /**
+     * `LazyColumn` con una [MiniaturaCard] por miniatura.
+     *
+     * @param listaMinis miniaturas que se muestran.
+     * @param modifier modificador de la lista.
+     */
     @Composable
     fun ListaMiniaturas(listaMinis : ArrayList<Miniaturas>, modifier: Modifier = Modifier){
         LazyColumn(
@@ -63,6 +80,12 @@ class Galeria : ComponentActivity() {
         }
     }
 
+    /**
+     * Tarjeta con la imagen recortada a todo el ancho y el nombre debajo.
+     *
+     * @param mini miniatura que se pinta.
+     * @param modifier modificador de la tarjeta.
+     */
     @Composable
     fun MiniaturaCard(mini : Miniaturas, modifier: Modifier = Modifier){
         Card(

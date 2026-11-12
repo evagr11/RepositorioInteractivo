@@ -1,8 +1,14 @@
 package com.evagr.proyectitosinteractivos.proyectos.proyecto5
 
+/**
+ * Crea las diez preguntas del test.
+ */
 class MisPreguntas {
     companion object{
         //Como Pregunta es de tipo generico tengo q poner <*> para indicar que puede ser de cualquier tipo, q se definira mas tarde
+        /**
+         * @return las diez preguntas, de tipo `Pregunta<*>` para mezclar respuestas de tipos distintos.
+         */
         fun cargarPreguntas() : ArrayList<Pregunta<*>>{
             val listaAuxiliar : ArrayList<Pregunta<*>> = ArrayList<Pregunta<*>>()
 

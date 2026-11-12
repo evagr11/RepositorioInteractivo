@@ -35,7 +35,15 @@ import androidx.compose.ui.unit.dp
 import com.evagr.proyectitosinteractivos.R
 import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 
+/**
+ * Mini-proyecto 3: formulario de inicio de sesión con el estado en `remember`.
+ */
 class Login : ComponentActivity() {
+    /**
+     * Carga [InputText] dentro del tema.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -48,6 +56,15 @@ class Login : ComponentActivity() {
         }
     }
 
+    /**
+     * Campo de texto de una línea con transformación visual opcional.
+     *
+     * @param label texto de la etiqueta.
+     * @param value texto actual del campo.
+     * @param onValueChange se llama con el texto nuevo cada vez que cambia.
+     * @param modifier modificador del campo.
+     * @param visualTransformation `PasswordVisualTransformation` para ocultar la contraseña.
+     */
     @Composable
     fun MyTextField(label : String, value: String, onValueChange : (String)-> Unit, modifier: Modifier = Modifier, visualTransformation: VisualTransformation = VisualTransformation.None){
         TextField(
@@ -65,6 +82,12 @@ class Login : ComponentActivity() {
 
     }
 
+    /**
+     * Pantalla del login: imagen de perfil, usuario, contraseña y botón «Entrar», que
+     * avisa con un `Toast` si falta algún campo.
+     *
+     * @param context contexto para mostrar los `Toast`.
+     */
     @Composable
     fun InputText(context: Context){
         var inputTextUsuario by remember { mutableStateOf("") }

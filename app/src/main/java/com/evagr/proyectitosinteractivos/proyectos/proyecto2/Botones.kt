@@ -27,7 +27,15 @@ import androidx.compose.ui.unit.dp
 import com.evagr.proyectitosinteractivos.R
 import com.evagr.proyectitosinteractivos.ui.theme.ProyectitosInteractivosTheme
 
+/**
+ * Mini-proyecto 2: la limonada.
+ */
 class Botones : ComponentActivity() {
+    /**
+     * Carga [Greeting] dentro de un `Scaffold`.
+     *
+     * @param savedInstanceState estado guardado de la Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,6 +52,12 @@ class Botones : ComponentActivity() {
 }
 
 
+/**
+ * Los cuatro pasos de la limonada: coger el limón, exprimirlo, beberse la limonada
+ * y volver a empezar. Un estado entero guarda el paso actual y el botón lo avanza.
+ *
+ * @param modifier modificador del texto de cada paso.
+ */
 @Composable
 fun Greeting(modifier: Modifier = Modifier){
     val lemonTree = painterResource(R.drawable.lemon_tree)
