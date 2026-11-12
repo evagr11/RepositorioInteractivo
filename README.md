@@ -3,8 +3,17 @@
 </div>
 
 <div align="center">
+  <a href="https://github.com/evagr11/RepositorioInteractivo/releases/latest" target="_blank">
+    <img src="https://img.shields.io/badge/Descargar_APK-7F52FF?style=for-the-badge&logo=android&logoColor=white" alt="Descargar APK">
+  </a>
   <a href="https://github.com/evagr11/RepositorioInteractivo" target="_blank">
     <img src="https://img.shields.io/badge/Ver_Código-2B1055?style=for-the-badge&logo=github&logoColor=white" alt="Ver Código">
+  </a>
+  <a href="docs/Documentacion_RepositorioInteractivo.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Documentación-7F52FF?style=for-the-badge&logo=latex&logoColor=white" alt="Documentación">
+  </a>
+  <a href="https://evagr11.github.io/Curriculum/proyectos/repositorio-interactivo.html" target="_blank">
+    <img src="https://img.shields.io/badge/Ver_Web-2B1055?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Ver Web">
   </a>
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
@@ -16,6 +25,10 @@
 
 <div align="center">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3500&pause=800&color=7F52FF&center=true&vCenter=true&width=600&lines=Aplicaci%C3%B3n+Android+nativa+con+Kotlin%3BInterfaz+declarativa+con+Jetpack+Compose%3B6+mini-proyectos+en+una+sola+app%3BViewModel+y+StateFlow%3BComponentes+de+Material+3" alt="Typing SVG" /></a>
+</div>
+
+<div align="center">
+  <img src=".github/readme/Mockup.jpg" alt="Mockup de Repositorio Interactivo: un móvil con la Limonada y tres móviles con la calculadora de propinas, el login y el login con ViewModel" width="100%"/>
 </div>
 
 # 🚀 Sobre el Proyecto
@@ -32,7 +45,7 @@
 *   **📝 Test de 10 preguntas**: Usa una clase **genérica** `Pregunta<T>` para mezclar respuestas de tipo `Boolean`, `Int`, `Double` y `String`, y comprueba cada una con su tipo antes de dar la puntuación.
 *   **🧠 Login con ViewModel**: El mismo login, pero con el estado en un `ViewModel` expuesto como `StateFlow` (`UIState`), que es el patrón recomendado por Google.
 
-### 🖼️ Galería de mini-proyectos
+### 📸 Galería
 
 <table align="center">
   <tr>
@@ -60,6 +73,8 @@ Este proyecto fue desarrollado como una iniciativa personal de aprendizaje y pr�
 | **Plataforma** | `Android SDK` (minSdk 24 · targetSdk 36) |
 | **Arquitectura** | `MVVM` (Model-View-ViewModel) con `StateFlow` para la gestión de estado reactivo. |
 | **Build System** | `Gradle` (con scripts en Kotlin `build.gradle.kts`) |
+| **Documentación** | `LaTeX` (PDF en `docs/`) |
+| **Distribución** | APK firmada en GitHub Releases |
 | **Dependencias Clave** | `androidx.activity:activity-compose`, `androidx.compose.material3`, `androidx.lifecycle:lifecycle-runtime-ktx` |
 
 # 📂 Estructura del Proyecto
@@ -88,31 +103,41 @@ RepositorioInteractivo/
                 ├── drawable-nodpi/  # Imágenes de las tarjetas y de los proyectos
                 ├── values/          # Strings, colores, temas XML
                 └── ...
+docs/
+└── Documentacion_RepositorioInteractivo.pdf  # Documentación técnica en LaTeX
+.github/readme/                    # Mockup de este README
 ```
 
 # 🚀 Cómo Utilizar el Proyecto
 
-Para ejecutar este proyecto en tu entorno local, necesitarás **Android Studio** (versión recomendada: Hedgehog o posterior).
+### 📲 Instalar la APK
 
-1.  **Clonar el repositorio:**
+La forma más rápida de probar la app es instalar la APK de la última versión, en [Releases](https://github.com/evagr11/RepositorioInteractivo/releases/latest):
+
+1.  Descarga el archivo `.apk` desde el móvil.
+2.  Ábrelo y, si Android lo pide, permite **instalar aplicaciones de orígenes desconocidos**.
+3.  Pulsa **Instalar** y abre **Repositorio Interactivo**.
+
+> Necesita **Android 7.0 (API 24)** o superior. No usa internet.
+
+### 🧑‍💻 Compilar desde el código
+
+Para ejecutarlo necesitas **Android Studio**.
+
+1.  **Clona el repositorio:**
     ```bash
     git clone https://github.com/evagr11/RepositorioInteractivo.git
     ```
+2.  **Abre el proyecto en Android Studio:** `File` > `Open` y selecciona la carpeta `RepositorioInteractivo`.
+3.  **Sincroniza Gradle** y espera a que descargue las dependencias.
+4.  Ejecuta la app en un emulador o en un móvil con `Run 'app'` y elige un mini-proyecto en el carrusel.
 
-2.  **Abrir el proyecto en Android Studio:**
-    *   En la pantalla de bienvenida de Android Studio, selecciona "**Open**".
-    *   Navega hasta la carpeta `RepositorioInteractivo` que acabas de clonar y selecciónala.
+# 🎯 Mejoras futuras
 
-3.  **Sincronizar Gradle:**
-    *   Android Studio detectará automáticamente los archivos `build.gradle.kts` y comenzará a sincronizar el proyecto y a descargar las dependencias necesarias. Espera a que este proceso finalice.
-
-4.  **Ejecutar la aplicación:**
-    *   Selecciona un emulador de Android o conecta un dispositivo físico.
-    *   Haz clic en el botón de **Run 'app'** (icono de play verde ▶️) en la barra de herramientas superior.
-
-<div align="center">
-    <p><em>Ejecuta la app para ver todos los proyectos interactivos.</em></p>
-</div>
+- 🎨 Terminar los ajustes visuales que quedaron pendientes y dar a todos los mini-proyectos el mismo estilo.
+- 🧭 Pasar de una `Activity` por mini-proyecto a una sola con **Navigation Compose**.
+- 🧠 Llevar el estado de más mini-proyectos a un `ViewModel`, como en el login avanzado.
+- 🧪 Añadir tests de la lógica (propinas y corrección del test).
 
 <br>
 

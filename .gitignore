@@ -15,3 +15,8 @@
 local.properties
 
 .idea/
+
+# Keystore y APK firmada
+*.jks
+*.keystore
+app/release/
