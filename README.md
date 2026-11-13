@@ -34,21 +34,21 @@
   <img src=".github/readme/Mockup.jpg" alt="Mockup de Repositorio Interactivo: un móvil con la Limonada y tres móviles con la calculadora de propinas, el login y el login con ViewModel" width="100%"/>
 </div>
 
-# 🚀 Sobre el Proyecto
+# Sobre el Proyecto
 
 **Repositorio Interactivo** es una aplicación para Android que agrupa una colección de **mini-proyectos de ejemplo**, diseñados para explorar y demostrar diversas funcionalidades de desarrollo nativo moderno con **Kotlin y Jetpack Compose**. Cada mini-proyecto es una `Activity` independiente que se abre desde una pantalla principal, y cada uno practica algo distinto: campos de texto, estado, listas, validación de formularios o ViewModel.
 
-✨ **Características principales:**
+**Características principales:**
 
-*   **🏠 Menú central**: Un carrusel horizontal (`LazyRow`) con una tarjeta por mini-proyecto. Cada tarjeta guarda la `Activity` de destino y la abre con un `Intent`, así que añadir un proyecto nuevo es añadir una línea a `MisProyectos`.
-*   **💵 Calculadora de propinas**: Calcula la propina según la cantidad y el porcentaje (15 % si no se indica) y la muestra con el formato de moneda del dispositivo (`NumberFormat`).
-*   **🍋 Limonada**: Cuatro pasos (coger el limón, exprimirlo, beberse la limonada y empezar de nuevo) que cambian de imagen y texto según el estado.
-*   **🔒 Login**: Formulario con usuario y contraseña oculta que avisa con un `Toast` si falta algún campo.
-*   **🖼️ Galería**: `LazyColumn` de tarjetas con imagen y nombre, cargadas desde recursos (`@DrawableRes`, `@StringRes`).
-*   **📝 Test de 10 preguntas**: Usa una clase **genérica** `Pregunta<T>` para mezclar respuestas de tipo `Boolean`, `Int`, `Double` y `String`, y comprueba cada una con su tipo antes de dar la puntuación.
-*   **🧠 Login con ViewModel**: El mismo login, pero con el estado en un `ViewModel` expuesto como `StateFlow` (`UIState`), que es el patrón recomendado por Google.
+*   **Menú central**: Un carrusel horizontal (`LazyRow`) con una tarjeta por mini-proyecto. Cada tarjeta guarda la `Activity` de destino y la abre con un `Intent`, así que añadir un proyecto nuevo es añadir una línea a `MisProyectos`.
+*   **Calculadora de propinas**: Calcula la propina según la cantidad y el porcentaje (15 % si no se indica) y la muestra con el formato de moneda del dispositivo (`NumberFormat`).
+*   **Limonada**: Cuatro pasos (coger el limón, exprimirlo, beberse la limonada y empezar de nuevo) que cambian de imagen y texto según el estado.
+*   **Login**: Formulario con usuario y contraseña oculta que avisa con un `Toast` si falta algún campo.
+*   **Galería**: `LazyColumn` de tarjetas con imagen y nombre, cargadas desde recursos (`@DrawableRes`, `@StringRes`).
+*   **Test de 10 preguntas**: Usa una clase **genérica** `Pregunta<T>` para mezclar respuestas de tipo `Boolean`, `Int`, `Double` y `String`, y comprueba cada una con su tipo antes de dar la puntuación.
+*   **Login con ViewModel**: El mismo login, pero con el estado en un `ViewModel` expuesto como `StateFlow` (`UIState`), que es el patrón recomendado por Google.
 
-### 📸 Galería
+### Galería
 
 <table align="center">
   <tr>
@@ -63,11 +63,11 @@
   </tr>
 </table>
 
-# 🧠 Contexto del Proyecto
+# Contexto del Proyecto
 
 Este proyecto fue desarrollado como una iniciativa personal de aprendizaje y práctica. El objetivo principal era consolidar conocimientos en el desarrollo de aplicaciones para Android utilizando el paradigma moderno de UI declarativa con **Jetpack Compose** y las mejores prácticas de arquitectura recomendadas por Google, como el uso de **ViewModel** y **StateFlow** para desacoplar la lógica de la UI.
 
-# 🛠️ Stack Tecnológico
+# Stack Tecnológico
 
 | Tecnología | Descripción |
 | :--- | :--- |
@@ -80,7 +80,7 @@ Este proyecto fue desarrollado como una iniciativa personal de aprendizaje y pr�
 | **Distribución** | APK firmada en GitHub Releases |
 | **Dependencias Clave** | `androidx.activity:activity-compose`, `androidx.compose.material3`, `androidx.lifecycle:lifecycle-runtime-ktx` |
 
-# 📂 Estructura del Proyecto
+# Estructura del Proyecto
 
 El repositorio está organizado siguiendo la estructura estándar de un proyecto de Android, con una clara separación de responsabilidades para cada mini-aplicación.
 
@@ -112,9 +112,9 @@ docs/
 .github/readme/                    # Mockup de este README
 ```
 
-# 🚀 Cómo Utilizar el Proyecto
+# Cómo Utilizar el Proyecto
 
-### 📲 Instalar la APK
+### Instalar la APK
 
 La forma más rápida de probar la app es instalar la APK de la última versión, en [Releases](https://github.com/evagr11/RepositorioInteractivo/releases/latest):
 
@@ -124,7 +124,7 @@ La forma más rápida de probar la app es instalar la APK de la última versión
 
 > Necesita **Android 7.0 (API 24)** o superior. No usa internet.
 
-### 🧑‍💻 Compilar desde el código
+### Compilar desde el código
 
 Para ejecutarlo necesitas **Android Studio**.
 
@@ -135,13 +135,6 @@ Para ejecutarlo necesitas **Android Studio**.
 2.  **Abre el proyecto en Android Studio:** `File` > `Open` y selecciona la carpeta `RepositorioInteractivo`.
 3.  **Sincroniza Gradle** y espera a que descargue las dependencias.
 4.  Ejecuta la app en un emulador o en un móvil con `Run 'app'` y elige un mini-proyecto en el carrusel.
-
-# 🎯 Mejoras futuras
-
-- 🎨 Terminar los ajustes visuales que quedaron pendientes y dar a todos los mini-proyectos el mismo estilo.
-- 🧭 Pasar de una `Activity` por mini-proyecto a una sola con **Navigation Compose**.
-- 🧠 Llevar el estado de más mini-proyectos a un `ViewModel`, como en el login avanzado.
-- 🧪 Añadir tests de la lógica (propinas y corrección del test).
 
 <br>
 
